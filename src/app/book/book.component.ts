@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Book} from "./book";
 
 @Component({
   selector: 'app-book',
@@ -7,14 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookComponent implements OnInit {
 
-  book: any = {
-     "title" : "JavaScript",
-     "author" : "Some author",
-     "year" : "2017",
-     "description" : "Book description"
-  };
+  book: Book;
 
-  constructor() { }
+  constructor() {
+    this.book = new Book("JavaScript", "Some author", 2017, "Book description");
+  }
 
   ngOnInit() {
   }

@@ -8,6 +8,8 @@ import {Book} from "./book";
 })
 export class BookComponent implements OnInit {
 
+  charNumber: number;
+
   book: Book;
 
   constructor() {
@@ -16,5 +18,11 @@ export class BookComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  displayNumber(value: any) : void {
+     let text = value.toString();
+     this.charNumber = text.length;
+  }
+
 
 }
